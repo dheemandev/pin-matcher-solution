@@ -32,3 +32,23 @@ document.getElementById('calculator-pin').addEventListener('click',function(even
   }
   
 })
+
+document.getElementById('submit-btn').addEventListener('click', function(){
+   const pin = document.getElementById('display-pin').value ;
+   const typedNumbers = document.getElementById('typed-numbers').value ;
+   const successNotify = document.getElementById('notify-success')
+   const failNotify = document.getElementById('notify-fail')
+
+   if(pin== typedNumbers){
+    
+    successNotify.style.display = 'block'
+    failNotify.style.display = 'none'
+
+   }
+   else{
+    
+    failNotify.style.display = 'block'
+    successNotify.style.display = 'none'
+
+   }
+})
